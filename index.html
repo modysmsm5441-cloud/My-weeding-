@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ahmed & Sherouk — Wedding Invitation</title>
+<meta name="theme-color" content="#f7efe7">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Playfair+Display:wght@400;500;600&display=swap');
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#eee4da;color:#5e4638;font-family:"Cormorant Garamond",serif}
+main{width:100%;overflow:hidden}
+section{min-height:100svh;width:100%;position:relative;display:flex;align-items:center;justify-content:center;padding:54px 22px}
+.card{width:min(680px,100%);text-align:center;position:relative}
+.ornament{position:absolute;inset:0;pointer-events:none;opacity:.65}
+.ornament:before,.ornament:after{content:"✿  ❀  ✧";position:absolute;font-size:30px;letter-spacing:9px}
+.ornament:before{top:18px;left:10px;transform:rotate(-12deg)}
+.ornament:after{right:10px;bottom:18px;transform:rotate(168deg)}
+.eyebrow{font-size:14px;letter-spacing:4px;text-transform:uppercase;margin-bottom:18px}
+.script{font-family:"Great Vibes",cursive;font-size:clamp(58px,17vw,105px);line-height:.85;font-weight:400}
+.names{display:flex;flex-direction:column;gap:8px}
+.amp{font-family:"Playfair Display",serif;font-size:25px}
+.divider{width:130px;height:1px;background:#a98a73;margin:24px auto;opacity:.7}
+.quran{font-family:serif;font-size:clamp(22px,5vw,31px);line-height:1.8;direction:rtl}
+.qref{font-size:13px;letter-spacing:2px;margin-top:16px}
+.soft{background:radial-gradient(circle at 50% 10%,#fffaf5 0,#f8eee5 42%,#eadbd0 100%)}
+.blush{background:radial-gradient(circle at 20% 20%,#fff9f5 0,#f5e6df 48%,#e5d4ca 100%)}
+.date{font-family:"Playfair Display",serif;font-size:clamp(35px,10vw,60px);letter-spacing:3px}
+.time{font-size:24px;letter-spacing:2px;margin-top:12px}
+.venue-name{font-family:"Playfair Display",serif;font-size:clamp(30px,8vw,50px);margin:10px 0}
+.venue-sub{font-size:21px}
+.btn{display:inline-block;margin-top:25px;padding:13px 26px;border:1px solid #9f816c;border-radius:999px;color:#5e4638;text-decoration:none;background:rgba(255,255,255,.38);font-size:17px;letter-spacing:1px}
+.btn:active{transform:scale(.98)}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:480px;margin:28px auto 0}
+.timebox{padding:13px 5px;border:1px solid rgba(126,97,78,.25);background:rgba(255,255,255,.3);border-radius:14px}
+.num{display:block;font-family:"Playfair Display",serif;font-size:28px}
+.lbl{font-size:12px;letter-spacing:2px;text-transform:uppercase}
+.scroll{position:absolute;bottom:24px;font-size:12px;letter-spacing:3px;text-transform:uppercase;opacity:.65}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.fade.show{opacity:1;transform:none}
+.flower{font-size:42px;opacity:.75;margin-bottom:14px}
+.footer{min-height:75svh}
+.small{font-size:18px;line-height:1.6}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fade{transition:none}}
+</style>
+</head>
+<body>
+<main>
+
+<section class="soft">
+  <div class="card fade">
+    <div class="ornament"></div>
+    <div class="flower">❀</div>
+    <div class="eyebrow">In the name of Allah</div>
+    <div class="quran">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً</div>
+    <div class="qref">سورة الروم — ٢١</div>
+    <div class="scroll">Scroll</div>
+  </div>
+</section>
+
+<section class="blush">
+  <div class="card fade">
+    <div class="eyebrow">Together with our families</div>
+    <div class="divider"></div>
+    <div class="small">We are delighted to invite you to celebrate the beginning of our forever.</div>
+    <div class="divider"></div>
+    <div class="script">Ahmed</div>
+    <div class="amp">&amp;</div>
+    <div class="script">Sherouk</div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="card fade">
+    <div class="eyebrow">Save the date</div>
+    <div class="date">22 / 1 / 2027</div>
+    <div class="divider"></div>
+    <div class="eyebrow">Friday</div>
+    <div class="time">8:00 PM</div>
+    <div class="countdown" id="countdown">
+      <div class="timebox"><span class="num" id="days">—</span><span class="lbl">Days</span></div>
+      <div class="timebox"><span class="num" id="hours">—</span><span class="lbl">Hours</span></div>
+      <div class="timebox"><span class="num" id="mins">—</span><span class="lbl">Min</span></div>
+      <div class="timebox"><span class="num" id="secs">—</span><span class="lbl">Sec</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="blush">
+  <div class="card fade">
+    <div class="flower">❧</div>
+    <div class="eyebrow">Our celebration</div>
+    <div class="venue-name">Sea Stars<br>Sea Garden</div>
+    <div class="venue-sub">El Max, Alexandria</div>
+    <div class="divider"></div>
+    <div class="small">Friday · 22 January 2027<br>8:00 PM</div>
+    <a class="btn" href="https://share.google/IUENN1UupBwlSTbNG" target="_blank" rel="noopener">Open in Google Maps ↗</a>
+  </div>
+</section>
+
+<section class="soft footer">
+  <div class="card fade">
+    <div class="script">Together</div>
+    <div class="divider"></div>
+    <div class="small">Two hearts, one beautiful story…<br>and forever begins here.</div>
+    <div class="flower" style="margin-top:28px">♡</div>
+    <div class="eyebrow">Ahmed &amp; Sherouk</div>
+  </div>
+</section>
+
+</main>
+<script>
+const target = new Date("2027-01-22T20:00:00+02:00").getTime();
+function tick(){
+  const d=target-Date.now();
+  const vals=d>0?[
+    Math.floor(d/86400000),
+    Math.floor(d%86400000/3600000),
+    Math.floor(d%3600000/60000),
+    Math.floor(d%60000/1000)
+  ]:[0,0,0,0];
+  ["days","hours","mins","secs"].forEach((id,i)=>document.getElementById(id).textContent=String(vals[i]).padStart(2,"0"));
+}
+tick(); setInterval(tick,1000);
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")}),{threshold:.18});
+document.querySelectorAll(".fade").forEach(x=>io.observe(x));
+</script>
+</body>
+</html>
